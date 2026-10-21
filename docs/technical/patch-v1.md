@@ -1,5 +1,7 @@
 # Phase 2 report: SignalRGB patch for the Zoom75 TIGA (stock firmware v1.1)
 
+> **Engineering record:** Phase 2, 2026-10-20: patch v1 (USB) as built and checked offline, before it was flashed. It was then flashed and verified on the keyboard ([hardware results](../hardware-results.md)). Status lines describe that moment. Current state: [README](../../README.md) · [all documents](../README.md).
+
 **Status: built and statically checked. Not flashed. Waiting for your go-ahead.**
 Nothing was sent to the keyboard in this phase: no HID traffic, no bootloader, no flashing. `original/` is untouched (its SHA-256 still matches `original/SHA256SUMS.txt`). Phase 3 (test script, plugin, README) is not started.
 
@@ -8,7 +10,7 @@ Nothing was sent to the keyboard in this phase: no HID traffic, no bootloader, n
 | `out/patched.hex` (the file you would flash) | `c93031edfbe3807372b5014b689165278e532de6e4f563526b0f0c6f850e6a79` |
 | input: original v1.1 hex | `678ec1441940c56e88626294f91c08628be6f2180ab56b8d1f5398906fb75d4b` |
 
-Legend, same as FEASIBILITY.md: **V** = verified (method given), **I** = inferred (reasoning given).
+Legend, same as [feasibility.md](feasibility.md): **V** = verified (method given), **I** = inferred (reasoning given).
 
 ---
 
@@ -56,7 +58,7 @@ On the switch back, the patch clears the frame buffer once and sets `last_effect
 
 The state lives in a 12-byte struct at `0x20007E00`, inside the unused 584 B above the stack top (`0x20007DB8–0x20007FFF`). It carries a magic word `"SRGB"`. Until the magic is valid, the patch treats itself as disabled and initialises the struct.
 
-**Design deviation from FEASIBILITY §3, made for safety:** §3 recommended growing the zero-init length in the scatter table. That changes data that the scatter-load routine reads at boot, which conflicts with **condition 4** ("the patch must not touch … scatter-load"). I used §3's listed alternative (the magic-guarded word) instead, so the scatter table is byte-identical. **V** (selfcheck).
+**Design deviation from feasibility.md §3, made for safety:** §3 recommended growing the zero-init length in the scatter table. That changes data that the scatter-load routine reads at boot, which conflicts with **condition 4** ("the patch must not touch … scatter-load"). I used §3's listed alternative (the magic-guarded word) instead, so the scatter table is byte-identical. **V** (selfcheck).
 
 ---
 
@@ -107,7 +109,7 @@ It runs the real bytes of `out/patched.hex`, entering through the patched `bl` a
 
 ---
 
-## 4. Phase 2 open items (FEASIBILITY §11)
+## 4. Phase 2 open items (feasibility.md §11)
 
 | Item | Result | Tag |
 |---|---|---|
@@ -161,7 +163,7 @@ Installed this phase:
 ## 7. Before you flash (when you decide to)
 
 1. **Gate 0:** reflash the official v1.1 hex once with the Wuque tool, normal upgrade flow.
-2. Then flash `out/patched.hex` the same way. Check its SHA-256 is `c93031ed…6a79`. Use "erase necessary sectors" only, never global or mass erase. Keep the tool open afterwards, so you can reflash the official hex in the same session if needed (FEASIBILITY §9).
+2. Then flash `out/patched.hex` the same way. Check its SHA-256 is `c93031ed…6a79`. Use "erase necessary sectors" only, never global or mass erase. Keep the tool open afterwards, so you can reflash the official hex in the same session if needed (feasibility.md §9).
 3. Check that the keyboard still works normally: typing, VIA, Console, knob, LCD, BT and 2.4G. Until SignalRGB sends `0x25`, the patch does nothing visible.
 
 Phase 3 (test script, plugin, README) waits for your go-ahead.

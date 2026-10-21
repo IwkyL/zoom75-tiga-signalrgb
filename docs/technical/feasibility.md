@@ -1,7 +1,9 @@
 # Phase 1 feasibility: SignalRGB on the Zoom75 TIGA (stock firmware v1.1)
 
+> **Engineering record:** Phase 1, 2026-10-19/20: the static analysis that decided whether the patch was possible and safe, the four safety conditions, and the recovery paths. Status lines describe that moment. Current state: [README](../../README.md) · [all documents](../README.md).
+
 Target: `WQ206B1UBTG2_V10_3424_KB81_RGB_LCD_SV3.0.0_20250412.hex`
-SHA-256 `678ec1441940c56e88626294f91c08628be6f2180ab56b8d1f5398906fb75d4b`, recorded in `original/SHA256SUMS.txt`.
+SHA-256 `678ec1441940c56e88626294f91c08628be6f2180ab56b8d1f5398906fb75d4b`, the official file (not in this repository).
 
 This phase was static analysis only. Nothing was sent to the keyboard, nothing was flashed, and MeletrixID was not installed.
 

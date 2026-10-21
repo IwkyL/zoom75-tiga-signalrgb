@@ -1,38 +1,21 @@
 # Allowlist: everything is ignored unless listed below. The repository holds only this
 # project's own work. Meletrix's firmware (original/, the root .hex, and every patched hex or
 # flat image, which contain it), vendor tools and decompiled vendor code (analysis/,
-# downloads/), backups, toolchains and generated logs stay local.
+# downloads/), backups, toolchains, logs and local working notes (HANDOFF.md, session
+# briefs) stay local.
 /*
 !/.gitignore
 !/.gitattributes
 !/LICENSE
-!/*.md
-# Working notes and session briefs stay local (local paths, session details).
-/HANDOFF.md
-/PHASE2_HANDOFF.md
-/PHASE3_HANDOFF.md
-/*SESSION_PROMPT.md
+!/README.md
+!/apply_patch_v2.py
 !/build_patch.py
 !/build_patch_v2.py
-!/apply_patch_v2.py
+!/docs/
 !/patch/
 !/patch_v2/
 !/prebuilt/
 !/plugin/
+!/tests/
 !/tools/
 /tools/__pycache__/
-!/logs/
-/logs/*
-!/logs/plugin_packets.json
-!/logs/plugin_packets_rx.json
-!/original/
-/original/*
-!/original/SHA256SUMS.txt
-!/out_v2/
-/out_v2/*
-!/out_v2/OFFLINE_VERIFICATION.md
-!/out_v2/SHA256SUMS.txt
-!/backups/
-/backups/*
-# The v1.0.1 cable plugin: tools/plugintest.mjs checks that 1.1.x sends exactly the same.
-!/backups/Meletrix_Zoom75_TIGA_SignalRGB_v1.0.1_e6cbbf85.js

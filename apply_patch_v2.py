@@ -10,15 +10,15 @@ This script
   2. checks the original bytes at the four hook sites;
   3. appends the prebuilt patch code from prebuilt/ (compiled from patch_v2/ by
      build_patch_v2.py; both SHA-256 are checked): 480 B of v1 at 0x0801A828 and 528 B of v2
-     at 0x0801AA08, ending at 0x0801AC17, inside the official sectors (README section 1);
+     at 0x0801AA08, ending at 0x0801AC17, inside the official sectors (docs/flashing.md);
   4. rewrites the four BL instructions (hooks A-D);
   5. writes <out>/patched_v2.hex in the original's record layout, but only if its SHA-256 is
      1f1f1c469d437d6d8626d9f667e32f0788b4798807b25c71fe8524f4772fe59d, the build that was
      verified offline and on a keyboard. Otherwise nothing is written.
 
 Needs only Python 3 (standard library). Flash the result with Meletrix's
-WuqueDFUupgradeProgrammer, normal upgrade ("erase necessary sectors"); read README.md
-sections 1 and 3 first.
+WuqueDFUupgradeProgrammer, normal upgrade ("erase necessary sectors"); read
+docs/flashing.md first.
 
 usage: python apply_patch_v2.py <official v1.1 .hex> [--out DIR]
 """

@@ -1,10 +1,12 @@
 # Patch v2: offline verification (step 5a/5b, 2026-10-20)
 
+> **Engineering record:** 2026-10-20: patch v2 as built and verified offline, before it was flashed (flashed 2026-10-21; [hardware results](../hardware-results.md)). The build report `out_v2/patch_report.md` it mentions is produced by `build_patch_v2.py` and is not in the repository. Status lines describe that moment. Current state: [README](../../README.md) · [all documents](../README.md).
+
 Status: **built and verified offline. Not flashed.** Nothing was sent to the keyboard or the
-receiver in this step. Design: `PATCH_V2_DESIGN.md` (approved). Build report with every
+receiver in this step. Design: [patch-v2-design.md](patch-v2-design.md) (approved). Build report with every
 changed hex record and the full listing: `out_v2/patch_report.md`.
 
-Legend as in HANDOFF.md: **V** verified (method), **I** inferred (reasoning).
+Legend: **V** verified, with the method (asm = disassembly, dec = Ghidra decompile, data = parsed bytes, src = source code, hw = measured on the keyboard, log = SignalRGB's log, emu = emulator); **I** inferred, with the reasoning.
 
 ## 1. The file to flash
 

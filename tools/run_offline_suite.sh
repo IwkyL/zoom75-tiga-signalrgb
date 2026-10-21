@@ -27,8 +27,8 @@ run v1_stock_led        $PY tools/hostsim.py stock --led
 run v1_radio            $PY tools/hostsim.py radio
 run plugin_generated    $PY tools/gen_plugins.py --check
 run v1_plugintest_node  node tools/plugintest.mjs
-run v1_plugin_replay    $PY tools/hostsim.py plugin logs/plugin_packets.json
-run v2_plugin_replay    $PY tools/hostsim.py plugin logs/plugin_packets_rx.json
+run v1_plugin_replay    $PY tools/hostsim.py plugin tests/fixtures/plugin_packets.json
+run v2_plugin_replay    $PY tools/hostsim.py plugin tests/fixtures/plugin_packets_rx.json
 run v2_selfcheck_neg    $PY tools/selfcheck_v2.py --negative
 run v2_emutest          $PY tools/emutest_v2.py
 run v2_radio2           $PY tools/hostsim.py radio2

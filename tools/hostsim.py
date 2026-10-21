@@ -9,7 +9,7 @@
                                            recorded from the SignalRGB plugin, checks the
                                            emulated replies match what the mock answered and
                                            that a rendered frame reaches set_color unchanged.
-                                           USB file: patch v1; 2.4G file (logs/
+                                           USB file: patch v1; 2.4G file (tests/fixtures/
                                            plugin_packets_rx.json): patch v2 behind the fake
                                            receiver
   hostsim.py plugin2g                      the 2.4G plugin itself (node tools/plugin_bridge.mjs)

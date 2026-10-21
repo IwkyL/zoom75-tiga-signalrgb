@@ -1,5 +1,7 @@
 # Patch v2, step 7: power and sleep on 2.4G (2026-10-21)
 
+> **Engineering record:** 2026-10-21: when the keyboard sleeps on 2.4G, what wakes it, and what SignalRGB changes about it. Status lines describe that moment. Current state: [README](../../README.md) · [all documents](../README.md).
+
 Firmware: `out_v2/patched_v2.hex` (`1f1f1c46…e59d`), unchanged.
 Static analysis of the official v1.1 image (`analysis/tiga_v11.bin`; patch v2 changes none of these
 addresses), then two hardware runs on 2026-10-21 (section 5), each with the user's OK.
@@ -136,7 +138,5 @@ the Fn+V at 13:47, cable unplugged, untouched until 14:08:00):
 | `logs/plugin_packets.json` (cable, unchanged since v1.0.1) / `logs/plugin_packets_rx.json` | `76acfa5c…0205` / `9f23cc4d…a763` |
 
 - Offline suite on these files: **20/20 PASS**, frozen files unchanged (`bash tools/run_offline_suite.sh <scratch>`).
-- Local backups (not in the repository except the v1.0.1 plugin; each named with its hash): `backups/Meletrix_Zoom75_TIGA_SignalRGB_v1.0.1_e6cbbf85.js` (the
-  baseline the cable plugin is compared with), the installed intermediate builds `backups/installed_*`,
-  `srgb_hidtest_v2step6_9a186c5a.py`, `hostsim_v2step6_b6dccc5b.py`, `run_offline_suite_cbbe21d3.sh`,
-  `plugintest_51b43a56.mjs`, `README_bc8ee7e6.md`, `HANDOFF_3893b242.md`.
+- The test tools changed afterwards, when the repository was reorganised (test data moved to
+  `tests/fixtures/`); the repository history has every version.

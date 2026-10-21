@@ -9,7 +9,7 @@
 //            send 0x24/0x25/0x26, must notify, must stop retrying after 5 attempts
 //   silent   no replies at first (VIA holding the interface), then the patch answers:
 //            the 5 s retry must recover and start streaming
-//   v1.0.1   the same three scenarios run on backups/..._v1.0.1_e6cbbf85.js: every write,
+//   v1.0.1   the same three scenarios run on tests/fixtures/..._v1.0.1.js: every write,
 //            read (with its timeout) and notification must be identical
 // 2.4G file (Meletrix_Zoom75_TIGA_24G_SignalRGB.js, 6D66:8888), against a mock receiver
 // with a fake clock that answers like patch v2 in 2.4G mode (replies after 45 ms; quiet
@@ -40,10 +40,10 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const pluginPath = process.argv[2] ?? join(root, "plugin", "Meletrix_Zoom75_TIGA_SignalRGB.js");
-const packetsOut = process.argv[3] ?? join(root, "logs", "plugin_packets.json");
-const rxPacketsOut = process.argv[4] ?? join(root, "logs", "plugin_packets_rx.json");
+const packetsOut = process.argv[3] ?? join(root, "tests", "fixtures", "plugin_packets.json");
+const rxPacketsOut = process.argv[4] ?? join(root, "tests", "fixtures", "plugin_packets_rx.json");
 const rxPluginPath = join(root, "plugin", "Meletrix_Zoom75_TIGA_24G_SignalRGB.js");
-const baselinePath = join(root, "backups", "Meletrix_Zoom75_TIGA_SignalRGB_v1.0.1_e6cbbf85.js");
+const baselinePath = join(root, "tests", "fixtures", "Meletrix_Zoom75_TIGA_SignalRGB_v1.0.1.js");   // SHA-256 e6cbbf85...
 const layout = JSON.parse(readFileSync(join(root, "plugin", "tiga_layout.json"), "utf8"));
 
 let fails = 0;

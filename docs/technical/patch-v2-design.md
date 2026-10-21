@@ -1,7 +1,9 @@
 # Patch v2 design: SignalRGB over the 2.4G receiver (step 3, not built)
 
+> **Engineering record:** 2026-10-20: the approved design of patch v2 (SignalRGB over the 2.4G receiver), written before any v2 code. Status lines describe that moment. Current state: [README](../../README.md) · [all documents](../README.md).
+
 Status 2026-10-20: **design only, no patch code** (approved, then built as patch v2:
-out_v2/OFFLINE_VERIFICATION.md). Base: official v1.1 (`678ec144…5d4b`) + patch v1 (`c93031ed…6a79`, flashed).
+[patch-v2-verification.md](patch-v2-verification.md)). Base: official v1.1 (`678ec144…5d4b`) + patch v1 (`c93031ed…6a79`, flashed).
 
 Legend: **V** verified, with the method (asm = disassembly, dec = Ghidra decompile, data = parsed bytes, src = source code, hw = measured on the keyboard, log = SignalRGB's log, emu = emulator); **I** inferred, with the reasoning.
 
