@@ -1,0 +1,2078 @@
+{
+ "size": [
+  31,
+  11
+ ],
+ "names": [
+  "Esc",
+  "F1",
+  "F2",
+  "F3",
+  "F4",
+  "F5",
+  "F6",
+  "F7",
+  "F8",
+  "F9",
+  "F10",
+  "F11",
+  "F12",
+  "F13",
+  "Home",
+  "`",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "0",
+  "-",
+  "=",
+  "Backspace (split L)",
+  "Backspace",
+  "Del",
+  "Tab",
+  "Q",
+  "W",
+  "E",
+  "R",
+  "T",
+  "Y",
+  "U",
+  "I",
+  "O",
+  "P",
+  "[",
+  "]",
+  "\\",
+  "Page Up",
+  "Caps Lock",
+  "A",
+  "S",
+  "D",
+  "F",
+  "G",
+  "H",
+  "J",
+  "K",
+  "L",
+  ";",
+  "'",
+  "Enter",
+  "Page Down",
+  "Left Shift",
+  "Left Shift (split R)",
+  "Z",
+  "X",
+  "C",
+  "V",
+  "B",
+  "N",
+  "M",
+  ",",
+  ".",
+  "/",
+  "Right Shift",
+  "Up Arrow",
+  "Left Ctrl",
+  "Left Win",
+  "Left Alt",
+  "Space (split L)",
+  "Space",
+  "Space (split M / 7U)",
+  "Space (split R)",
+  "Right Alt",
+  "Fn",
+  "Left Arrow",
+  "Down Arrow",
+  "Right Arrow"
+ ],
+ "positions": [
+  [
+   0,
+   0
+  ],
+  [
+   2,
+   0
+  ],
+  [
+   4,
+   0
+  ],
+  [
+   6,
+   0
+  ],
+  [
+   8,
+   0
+  ],
+  [
+   11,
+   0
+  ],
+  [
+   13,
+   0
+  ],
+  [
+   15,
+   0
+  ],
+  [
+   17,
+   0
+  ],
+  [
+   19,
+   0
+  ],
+  [
+   21,
+   0
+  ],
+  [
+   23,
+   0
+  ],
+  [
+   25,
+   0
+  ],
+  [
+   28,
+   0
+  ],
+  [
+   30,
+   0
+  ],
+  [
+   0,
+   2
+  ],
+  [
+   2,
+   2
+  ],
+  [
+   4,
+   2
+  ],
+  [
+   6,
+   2
+  ],
+  [
+   8,
+   2
+  ],
+  [
+   10,
+   2
+  ],
+  [
+   12,
+   2
+  ],
+  [
+   14,
+   2
+  ],
+  [
+   16,
+   2
+  ],
+  [
+   18,
+   2
+  ],
+  [
+   20,
+   2
+  ],
+  [
+   22,
+   2
+  ],
+  [
+   24,
+   2
+  ],
+  [
+   26,
+   2
+  ],
+  [
+   27,
+   2
+  ],
+  [
+   30,
+   2
+  ],
+  [
+   0,
+   4
+  ],
+  [
+   3,
+   4
+  ],
+  [
+   5,
+   4
+  ],
+  [
+   7,
+   4
+  ],
+  [
+   9,
+   4
+  ],
+  [
+   11,
+   4
+  ],
+  [
+   13,
+   4
+  ],
+  [
+   15,
+   4
+  ],
+  [
+   17,
+   4
+  ],
+  [
+   19,
+   4
+  ],
+  [
+   21,
+   4
+  ],
+  [
+   23,
+   4
+  ],
+  [
+   25,
+   4
+  ],
+  [
+   27,
+   4
+  ],
+  [
+   30,
+   4
+  ],
+  [
+   0,
+   6
+  ],
+  [
+   3,
+   6
+  ],
+  [
+   5,
+   6
+  ],
+  [
+   7,
+   6
+  ],
+  [
+   9,
+   6
+  ],
+  [
+   11,
+   6
+  ],
+  [
+   13,
+   6
+  ],
+  [
+   15,
+   6
+  ],
+  [
+   17,
+   6
+  ],
+  [
+   19,
+   6
+  ],
+  [
+   21,
+   6
+  ],
+  [
+   23,
+   6
+  ],
+  [
+   26,
+   6
+  ],
+  [
+   30,
+   6
+  ],
+  [
+   1,
+   8
+  ],
+  [
+   2,
+   8
+  ],
+  [
+   4,
+   8
+  ],
+  [
+   6,
+   8
+  ],
+  [
+   8,
+   8
+  ],
+  [
+   10,
+   8
+  ],
+  [
+   12,
+   8
+  ],
+  [
+   14,
+   8
+  ],
+  [
+   16,
+   8
+  ],
+  [
+   18,
+   8
+  ],
+  [
+   20,
+   8
+  ],
+  [
+   22,
+   8
+  ],
+  [
+   25,
+   8
+  ],
+  [
+   28,
+   8
+  ],
+  [
+   0,
+   10
+  ],
+  [
+   2,
+   10
+  ],
+  [
+   5,
+   10
+  ],
+  [
+   10,
+   10
+  ],
+  [
+   12,
+   10
+  ],
+  [
+   14,
+   10
+  ],
+  [
+   18,
+   10
+  ],
+  [
+   20,
+   10
+  ],
+  [
+   22,
+   10
+  ],
+  [
+   26,
+   10
+  ],
+  [
+   28,
+   10
+  ],
+  [
+   30,
+   10
+  ]
+ ],
+ "leds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  47,
+  48,
+  49,
+  50,
+  51,
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58,
+  59,
+  60,
+  61,
+  62,
+  63,
+  64,
+  65,
+  66,
+  67,
+  68,
+  69,
+  70,
+  71,
+  72,
+  73,
+  74,
+  75,
+  76,
+  77,
+  78,
+  79,
+  80,
+  81,
+  82,
+  83,
+  84,
+  85
+ ],
+ "table": [
+  {
+   "led": 0,
+   "row": 0,
+   "col": 0,
+   "keycode": "0x0029",
+   "name": "Esc",
+   "alt_only": false,
+   "cx": 0.5,
+   "cy": 0.5,
+   "grid": [
+    0,
+    0
+   ],
+   "fw_point": [
+    0,
+    12
+   ]
+  },
+  {
+   "led": 1,
+   "row": 0,
+   "col": 1,
+   "keycode": "0x003A",
+   "name": "F1",
+   "alt_only": false,
+   "cx": 1.75,
+   "cy": 0.5,
+   "grid": [
+    2,
+    0
+   ],
+   "fw_point": [
+    17,
+    12
+   ]
+  },
+  {
+   "led": 2,
+   "row": 0,
+   "col": 2,
+   "keycode": "0x003B",
+   "name": "F2",
+   "alt_only": false,
+   "cx": 2.75,
+   "cy": 0.5,
+   "grid": [
+    4,
+    0
+   ],
+   "fw_point": [
+    31,
+    12
+   ]
+  },
+  {
+   "led": 3,
+   "row": 0,
+   "col": 3,
+   "keycode": "0x003C",
+   "name": "F3",
+   "alt_only": false,
+   "cx": 3.75,
+   "cy": 0.5,
+   "grid": [
+    6,
+    0
+   ],
+   "fw_point": [
+    44,
+    12
+   ]
+  },
+  {
+   "led": 4,
+   "row": 0,
+   "col": 4,
+   "keycode": "0x003D",
+   "name": "F4",
+   "alt_only": false,
+   "cx": 4.75,
+   "cy": 0.5,
+   "grid": [
+    8,
+    0
+   ],
+   "fw_point": [
+    58,
+    12
+   ]
+  },
+  {
+   "led": 5,
+   "row": 0,
+   "col": 5,
+   "keycode": "0x003E",
+   "name": "F5",
+   "alt_only": false,
+   "cx": 6.0,
+   "cy": 0.5,
+   "grid": [
+    11,
+    0
+   ],
+   "fw_point": [
+    75,
+    12
+   ]
+  },
+  {
+   "led": 6,
+   "row": 0,
+   "col": 6,
+   "keycode": "0x003F",
+   "name": "F6",
+   "alt_only": false,
+   "cx": 7.0,
+   "cy": 0.5,
+   "grid": [
+    13,
+    0
+   ],
+   "fw_point": [
+    89,
+    12
+   ]
+  },
+  {
+   "led": 7,
+   "row": 0,
+   "col": 7,
+   "keycode": "0x0040",
+   "name": "F7",
+   "alt_only": false,
+   "cx": 8.0,
+   "cy": 0.5,
+   "grid": [
+    15,
+    0
+   ],
+   "fw_point": [
+    103,
+    12
+   ]
+  },
+  {
+   "led": 8,
+   "row": 0,
+   "col": 8,
+   "keycode": "0x0041",
+   "name": "F8",
+   "alt_only": false,
+   "cx": 9.0,
+   "cy": 0.5,
+   "grid": [
+    17,
+    0
+   ],
+   "fw_point": [
+    117,
+    12
+   ]
+  },
+  {
+   "led": 9,
+   "row": 0,
+   "col": 9,
+   "keycode": "0x0042",
+   "name": "F9",
+   "alt_only": false,
+   "cx": 10.25,
+   "cy": 0.5,
+   "grid": [
+    19,
+    0
+   ],
+   "fw_point": [
+    134,
+    12
+   ]
+  },
+  {
+   "led": 10,
+   "row": 0,
+   "col": 10,
+   "keycode": "0x0043",
+   "name": "F10",
+   "alt_only": false,
+   "cx": 11.25,
+   "cy": 0.5,
+   "grid": [
+    21,
+    0
+   ],
+   "fw_point": [
+    148,
+    12
+   ]
+  },
+  {
+   "led": 11,
+   "row": 0,
+   "col": 11,
+   "keycode": "0x0044",
+   "name": "F11",
+   "alt_only": false,
+   "cx": 12.25,
+   "cy": 0.5,
+   "grid": [
+    23,
+    0
+   ],
+   "fw_point": [
+    161,
+    12
+   ]
+  },
+  {
+   "led": 12,
+   "row": 0,
+   "col": 12,
+   "keycode": "0x0045",
+   "name": "F12",
+   "alt_only": false,
+   "cx": 13.25,
+   "cy": 0.5,
+   "grid": [
+    25,
+    0
+   ],
+   "fw_point": [
+    175,
+    12
+   ]
+  },
+  {
+   "led": 13,
+   "row": 0,
+   "col": 13,
+   "keycode": "0x0068",
+   "name": "F13",
+   "alt_only": false,
+   "cx": 14.5,
+   "cy": 0.5,
+   "grid": [
+    28,
+    0
+   ],
+   "fw_point": [
+    186,
+    12
+   ]
+  },
+  {
+   "led": 14,
+   "row": 0,
+   "col": 14,
+   "keycode": "0x004A",
+   "name": "Home",
+   "alt_only": false,
+   "cx": 15.5,
+   "cy": 0.5,
+   "grid": [
+    30,
+    0
+   ],
+   "fw_point": [
+    210,
+    12
+   ]
+  },
+  {
+   "led": 15,
+   "row": 1,
+   "col": 0,
+   "keycode": "0x0035",
+   "name": "`",
+   "alt_only": false,
+   "cx": 0.5,
+   "cy": 1.75,
+   "grid": [
+    0,
+    2
+   ],
+   "fw_point": [
+    0,
+    25
+   ]
+  },
+  {
+   "led": 16,
+   "row": 1,
+   "col": 1,
+   "keycode": "0x001E",
+   "name": "1",
+   "alt_only": false,
+   "cx": 1.5,
+   "cy": 1.75,
+   "grid": [
+    2,
+    2
+   ],
+   "fw_point": [
+    13,
+    25
+   ]
+  },
+  {
+   "led": 17,
+   "row": 1,
+   "col": 2,
+   "keycode": "0x001F",
+   "name": "2",
+   "alt_only": false,
+   "cx": 2.5,
+   "cy": 1.75,
+   "grid": [
+    4,
+    2
+   ],
+   "fw_point": [
+    27,
+    25
+   ]
+  },
+  {
+   "led": 18,
+   "row": 1,
+   "col": 3,
+   "keycode": "0x0020",
+   "name": "3",
+   "alt_only": false,
+   "cx": 3.5,
+   "cy": 1.75,
+   "grid": [
+    6,
+    2
+   ],
+   "fw_point": [
+    41,
+    25
+   ]
+  },
+  {
+   "led": 19,
+   "row": 1,
+   "col": 4,
+   "keycode": "0x0021",
+   "name": "4",
+   "alt_only": false,
+   "cx": 4.5,
+   "cy": 1.75,
+   "grid": [
+    8,
+    2
+   ],
+   "fw_point": [
+    55,
+    25
+   ]
+  },
+  {
+   "led": 20,
+   "row": 1,
+   "col": 5,
+   "keycode": "0x0022",
+   "name": "5",
+   "alt_only": false,
+   "cx": 5.5,
+   "cy": 1.75,
+   "grid": [
+    10,
+    2
+   ],
+   "fw_point": [
+    68,
+    25
+   ]
+  },
+  {
+   "led": 21,
+   "row": 1,
+   "col": 6,
+   "keycode": "0x0023",
+   "name": "6",
+   "alt_only": false,
+   "cx": 6.5,
+   "cy": 1.75,
+   "grid": [
+    12,
+    2
+   ],
+   "fw_point": [
+    82,
+    25
+   ]
+  },
+  {
+   "led": 22,
+   "row": 1,
+   "col": 7,
+   "keycode": "0x0024",
+   "name": "7",
+   "alt_only": false,
+   "cx": 7.5,
+   "cy": 1.75,
+   "grid": [
+    14,
+    2
+   ],
+   "fw_point": [
+    96,
+    25
+   ]
+  },
+  {
+   "led": 23,
+   "row": 1,
+   "col": 8,
+   "keycode": "0x0025",
+   "name": "8",
+   "alt_only": false,
+   "cx": 8.5,
+   "cy": 1.75,
+   "grid": [
+    16,
+    2
+   ],
+   "fw_point": [
+    110,
+    25
+   ]
+  },
+  {
+   "led": 24,
+   "row": 1,
+   "col": 9,
+   "keycode": "0x0026",
+   "name": "9",
+   "alt_only": false,
+   "cx": 9.5,
+   "cy": 1.75,
+   "grid": [
+    18,
+    2
+   ],
+   "fw_point": [
+    124,
+    25
+   ]
+  },
+  {
+   "led": 25,
+   "row": 1,
+   "col": 10,
+   "keycode": "0x0027",
+   "name": "0",
+   "alt_only": false,
+   "cx": 10.5,
+   "cy": 1.75,
+   "grid": [
+    20,
+    2
+   ],
+   "fw_point": [
+    137,
+    25
+   ]
+  },
+  {
+   "led": 26,
+   "row": 1,
+   "col": 11,
+   "keycode": "0x002D",
+   "name": "-",
+   "alt_only": false,
+   "cx": 11.5,
+   "cy": 1.75,
+   "grid": [
+    22,
+    2
+   ],
+   "fw_point": [
+    151,
+    25
+   ]
+  },
+  {
+   "led": 27,
+   "row": 1,
+   "col": 12,
+   "keycode": "0x002E",
+   "name": "=",
+   "alt_only": false,
+   "cx": 12.5,
+   "cy": 1.75,
+   "grid": [
+    24,
+    2
+   ],
+   "fw_point": [
+    165,
+    25
+   ]
+  },
+  {
+   "led": 28,
+   "row": 1,
+   "col": 13,
+   "keycode": "0x002A",
+   "name": "Backspace (split L)",
+   "alt_only": true,
+   "cx": 13.5,
+   "cy": 1.75,
+   "grid": [
+    26,
+    2
+   ],
+   "fw_point": [
+    179,
+    25
+   ]
+  },
+  {
+   "led": 29,
+   "row": 3,
+   "col": 13,
+   "keycode": "0x002A",
+   "name": "Backspace",
+   "alt_only": false,
+   "cx": 14.0,
+   "cy": 1.75,
+   "grid": [
+    27,
+    2
+   ],
+   "fw_point": [
+    192,
+    25
+   ]
+  },
+  {
+   "led": 30,
+   "row": 1,
+   "col": 14,
+   "keycode": "0x004C",
+   "name": "Del",
+   "alt_only": false,
+   "cx": 15.5,
+   "cy": 1.75,
+   "grid": [
+    30,
+    2
+   ],
+   "fw_point": [
+    210,
+    25
+   ]
+  },
+  {
+   "led": 31,
+   "row": 2,
+   "col": 0,
+   "keycode": "0x002B",
+   "name": "Tab",
+   "alt_only": false,
+   "cx": 0.75,
+   "cy": 2.75,
+   "grid": [
+    0,
+    4
+   ],
+   "fw_point": [
+    6,
+    38
+   ]
+  },
+  {
+   "led": 32,
+   "row": 2,
+   "col": 1,
+   "keycode": "0x0014",
+   "name": "Q",
+   "alt_only": false,
+   "cx": 2.0,
+   "cy": 2.75,
+   "grid": [
+    3,
+    4
+   ],
+   "fw_point": [
+    20,
+    38
+   ]
+  },
+  {
+   "led": 33,
+   "row": 2,
+   "col": 2,
+   "keycode": "0x001A",
+   "name": "W",
+   "alt_only": false,
+   "cx": 3.0,
+   "cy": 2.75,
+   "grid": [
+    5,
+    4
+   ],
+   "fw_point": [
+    34,
+    38
+   ]
+  },
+  {
+   "led": 34,
+   "row": 2,
+   "col": 3,
+   "keycode": "0x0008",
+   "name": "E",
+   "alt_only": false,
+   "cx": 4.0,
+   "cy": 2.75,
+   "grid": [
+    7,
+    4
+   ],
+   "fw_point": [
+    48,
+    38
+   ]
+  },
+  {
+   "led": 35,
+   "row": 2,
+   "col": 4,
+   "keycode": "0x0015",
+   "name": "R",
+   "alt_only": false,
+   "cx": 5.0,
+   "cy": 2.75,
+   "grid": [
+    9,
+    4
+   ],
+   "fw_point": [
+    62,
+    38
+   ]
+  },
+  {
+   "led": 36,
+   "row": 2,
+   "col": 5,
+   "keycode": "0x0017",
+   "name": "T",
+   "alt_only": false,
+   "cx": 6.0,
+   "cy": 2.75,
+   "grid": [
+    11,
+    4
+   ],
+   "fw_point": [
+    75,
+    38
+   ]
+  },
+  {
+   "led": 37,
+   "row": 2,
+   "col": 6,
+   "keycode": "0x001C",
+   "name": "Y",
+   "alt_only": false,
+   "cx": 7.0,
+   "cy": 2.75,
+   "grid": [
+    13,
+    4
+   ],
+   "fw_point": [
+    89,
+    38
+   ]
+  },
+  {
+   "led": 38,
+   "row": 2,
+   "col": 7,
+   "keycode": "0x0018",
+   "name": "U",
+   "alt_only": false,
+   "cx": 8.0,
+   "cy": 2.75,
+   "grid": [
+    15,
+    4
+   ],
+   "fw_point": [
+    103,
+    38
+   ]
+  },
+  {
+   "led": 39,
+   "row": 2,
+   "col": 8,
+   "keycode": "0x000C",
+   "name": "I",
+   "alt_only": false,
+   "cx": 9.0,
+   "cy": 2.75,
+   "grid": [
+    17,
+    4
+   ],
+   "fw_point": [
+    117,
+    38
+   ]
+  },
+  {
+   "led": 40,
+   "row": 2,
+   "col": 9,
+   "keycode": "0x0012",
+   "name": "O",
+   "alt_only": false,
+   "cx": 10.0,
+   "cy": 2.75,
+   "grid": [
+    19,
+    4
+   ],
+   "fw_point": [
+    130,
+    38
+   ]
+  },
+  {
+   "led": 41,
+   "row": 2,
+   "col": 10,
+   "keycode": "0x0013",
+   "name": "P",
+   "alt_only": false,
+   "cx": 11.0,
+   "cy": 2.75,
+   "grid": [
+    21,
+    4
+   ],
+   "fw_point": [
+    144,
+    38
+   ]
+  },
+  {
+   "led": 42,
+   "row": 2,
+   "col": 11,
+   "keycode": "0x002F",
+   "name": "[",
+   "alt_only": false,
+   "cx": 12.0,
+   "cy": 2.75,
+   "grid": [
+    23,
+    4
+   ],
+   "fw_point": [
+    158,
+    38
+   ]
+  },
+  {
+   "led": 43,
+   "row": 2,
+   "col": 12,
+   "keycode": "0x0030",
+   "name": "]",
+   "alt_only": false,
+   "cx": 13.0,
+   "cy": 2.75,
+   "grid": [
+    25,
+    4
+   ],
+   "fw_point": [
+    172,
+    38
+   ]
+  },
+  {
+   "led": 44,
+   "row": 2,
+   "col": 13,
+   "keycode": "0x0031",
+   "name": "\\",
+   "alt_only": false,
+   "cx": 14.25,
+   "cy": 2.75,
+   "grid": [
+    27,
+    4
+   ],
+   "fw_point": [
+    186,
+    38
+   ]
+  },
+  {
+   "led": 45,
+   "row": 2,
+   "col": 14,
+   "keycode": "0x004B",
+   "name": "Page Up",
+   "alt_only": false,
+   "cx": 15.5,
+   "cy": 2.75,
+   "grid": [
+    30,
+    4
+   ],
+   "fw_point": [
+    210,
+    38
+   ]
+  },
+  {
+   "led": 46,
+   "row": 3,
+   "col": 0,
+   "keycode": "0x0039",
+   "name": "Caps Lock",
+   "alt_only": false,
+   "cx": 0.875,
+   "cy": 3.75,
+   "grid": [
+    0,
+    6
+   ],
+   "fw_point": [
+    10,
+    51
+   ]
+  },
+  {
+   "led": 47,
+   "row": 3,
+   "col": 1,
+   "keycode": "0x0004",
+   "name": "A",
+   "alt_only": false,
+   "cx": 2.25,
+   "cy": 3.75,
+   "grid": [
+    3,
+    6
+   ],
+   "fw_point": [
+    24,
+    51
+   ]
+  },
+  {
+   "led": 48,
+   "row": 3,
+   "col": 2,
+   "keycode": "0x0016",
+   "name": "S",
+   "alt_only": false,
+   "cx": 3.25,
+   "cy": 3.75,
+   "grid": [
+    5,
+    6
+   ],
+   "fw_point": [
+    37,
+    51
+   ]
+  },
+  {
+   "led": 49,
+   "row": 3,
+   "col": 3,
+   "keycode": "0x0007",
+   "name": "D",
+   "alt_only": false,
+   "cx": 4.25,
+   "cy": 3.75,
+   "grid": [
+    7,
+    6
+   ],
+   "fw_point": [
+    51,
+    51
+   ]
+  },
+  {
+   "led": 50,
+   "row": 3,
+   "col": 4,
+   "keycode": "0x0009",
+   "name": "F",
+   "alt_only": false,
+   "cx": 5.25,
+   "cy": 3.75,
+   "grid": [
+    9,
+    6
+   ],
+   "fw_point": [
+    65,
+    51
+   ]
+  },
+  {
+   "led": 51,
+   "row": 3,
+   "col": 5,
+   "keycode": "0x000A",
+   "name": "G",
+   "alt_only": false,
+   "cx": 6.25,
+   "cy": 3.75,
+   "grid": [
+    11,
+    6
+   ],
+   "fw_point": [
+    79,
+    51
+   ]
+  },
+  {
+   "led": 52,
+   "row": 3,
+   "col": 6,
+   "keycode": "0x000B",
+   "name": "H",
+   "alt_only": false,
+   "cx": 7.25,
+   "cy": 3.75,
+   "grid": [
+    13,
+    6
+   ],
+   "fw_point": [
+    93,
+    51
+   ]
+  },
+  {
+   "led": 53,
+   "row": 3,
+   "col": 7,
+   "keycode": "0x000D",
+   "name": "J",
+   "alt_only": false,
+   "cx": 8.25,
+   "cy": 3.75,
+   "grid": [
+    15,
+    6
+   ],
+   "fw_point": [
+    106,
+    51
+   ]
+  },
+  {
+   "led": 54,
+   "row": 3,
+   "col": 8,
+   "keycode": "0x000E",
+   "name": "K",
+   "alt_only": false,
+   "cx": 9.25,
+   "cy": 3.75,
+   "grid": [
+    17,
+    6
+   ],
+   "fw_point": [
+    120,
+    51
+   ]
+  },
+  {
+   "led": 55,
+   "row": 3,
+   "col": 9,
+   "keycode": "0x000F",
+   "name": "L",
+   "alt_only": false,
+   "cx": 10.25,
+   "cy": 3.75,
+   "grid": [
+    19,
+    6
+   ],
+   "fw_point": [
+    134,
+    51
+   ]
+  },
+  {
+   "led": 56,
+   "row": 3,
+   "col": 10,
+   "keycode": "0x0033",
+   "name": ";",
+   "alt_only": false,
+   "cx": 11.25,
+   "cy": 3.75,
+   "grid": [
+    21,
+    6
+   ],
+   "fw_point": [
+    148,
+    51
+   ]
+  },
+  {
+   "led": 57,
+   "row": 3,
+   "col": 11,
+   "keycode": "0x0034",
+   "name": "'",
+   "alt_only": false,
+   "cx": 12.25,
+   "cy": 3.75,
+   "grid": [
+    23,
+    6
+   ],
+   "fw_point": [
+    161,
+    51
+   ]
+  },
+  {
+   "led": 58,
+   "row": 3,
+   "col": 12,
+   "keycode": "0x0028",
+   "name": "Enter",
+   "alt_only": false,
+   "cx": 13.875,
+   "cy": 3.75,
+   "grid": [
+    26,
+    6
+   ],
+   "fw_point": [
+    175,
+    51
+   ]
+  },
+  {
+   "led": 59,
+   "row": 3,
+   "col": 14,
+   "keycode": "0x004E",
+   "name": "Page Down",
+   "alt_only": false,
+   "cx": 15.5,
+   "cy": 3.75,
+   "grid": [
+    30,
+    6
+   ],
+   "fw_point": [
+    210,
+    51
+   ]
+  },
+  {
+   "led": 60,
+   "row": 4,
+   "col": 0,
+   "keycode": "0x00E1",
+   "name": "Left Shift",
+   "alt_only": false,
+   "cx": 1.125,
+   "cy": 4.75,
+   "grid": [
+    1,
+    8
+   ],
+   "fw_point": [
+    17,
+    64
+   ]
+  },
+  {
+   "led": 61,
+   "row": 4,
+   "col": 1,
+   "keycode": "0x00E1",
+   "name": "Left Shift (split R)",
+   "alt_only": true,
+   "cx": 1.75,
+   "cy": 4.75,
+   "grid": [
+    2,
+    8
+   ],
+   "fw_point": [
+    31,
+    64
+   ]
+  },
+  {
+   "led": 62,
+   "row": 4,
+   "col": 2,
+   "keycode": "0x001D",
+   "name": "Z",
+   "alt_only": false,
+   "cx": 2.75,
+   "cy": 4.75,
+   "grid": [
+    4,
+    8
+   ],
+   "fw_point": [
+    44,
+    64
+   ]
+  },
+  {
+   "led": 63,
+   "row": 4,
+   "col": 3,
+   "keycode": "0x001B",
+   "name": "X",
+   "alt_only": false,
+   "cx": 3.75,
+   "cy": 4.75,
+   "grid": [
+    6,
+    8
+   ],
+   "fw_point": [
+    58,
+    64
+   ]
+  },
+  {
+   "led": 64,
+   "row": 4,
+   "col": 4,
+   "keycode": "0x0006",
+   "name": "C",
+   "alt_only": false,
+   "cx": 4.75,
+   "cy": 4.75,
+   "grid": [
+    8,
+    8
+   ],
+   "fw_point": [
+    72,
+    64
+   ]
+  },
+  {
+   "led": 65,
+   "row": 4,
+   "col": 5,
+   "keycode": "0x0019",
+   "name": "V",
+   "alt_only": false,
+   "cx": 5.75,
+   "cy": 4.75,
+   "grid": [
+    10,
+    8
+   ],
+   "fw_point": [
+    86,
+    64
+   ]
+  },
+  {
+   "led": 66,
+   "row": 4,
+   "col": 6,
+   "keycode": "0x0005",
+   "name": "B",
+   "alt_only": false,
+   "cx": 6.75,
+   "cy": 4.75,
+   "grid": [
+    12,
+    8
+   ],
+   "fw_point": [
+    99,
+    64
+   ]
+  },
+  {
+   "led": 67,
+   "row": 4,
+   "col": 7,
+   "keycode": "0x0011",
+   "name": "N",
+   "alt_only": false,
+   "cx": 7.75,
+   "cy": 4.75,
+   "grid": [
+    14,
+    8
+   ],
+   "fw_point": [
+    113,
+    64
+   ]
+  },
+  {
+   "led": 68,
+   "row": 4,
+   "col": 8,
+   "keycode": "0x0010",
+   "name": "M",
+   "alt_only": false,
+   "cx": 8.75,
+   "cy": 4.75,
+   "grid": [
+    16,
+    8
+   ],
+   "fw_point": [
+    127,
+    64
+   ]
+  },
+  {
+   "led": 69,
+   "row": 4,
+   "col": 9,
+   "keycode": "0x0036",
+   "name": ",",
+   "alt_only": false,
+   "cx": 9.75,
+   "cy": 4.75,
+   "grid": [
+    18,
+    8
+   ],
+   "fw_point": [
+    141,
+    64
+   ]
+  },
+  {
+   "led": 70,
+   "row": 4,
+   "col": 10,
+   "keycode": "0x0037",
+   "name": ".",
+   "alt_only": false,
+   "cx": 10.75,
+   "cy": 4.75,
+   "grid": [
+    20,
+    8
+   ],
+   "fw_point": [
+    155,
+    64
+   ]
+  },
+  {
+   "led": 71,
+   "row": 4,
+   "col": 11,
+   "keycode": "0x0038",
+   "name": "/",
+   "alt_only": false,
+   "cx": 11.75,
+   "cy": 4.75,
+   "grid": [
+    22,
+    8
+   ],
+   "fw_point": [
+    168,
+    64
+   ]
+  },
+  {
+   "led": 72,
+   "row": 4,
+   "col": 12,
+   "keycode": "0x00E5",
+   "name": "Right Shift",
+   "alt_only": false,
+   "cx": 13.125,
+   "cy": 4.75,
+   "grid": [
+    25,
+    8
+   ],
+   "fw_point": [
+    182,
+    64
+   ]
+  },
+  {
+   "led": 73,
+   "row": 4,
+   "col": 13,
+   "keycode": "0x0052",
+   "name": "Up Arrow",
+   "alt_only": false,
+   "cx": 14.5,
+   "cy": 4.75,
+   "grid": [
+    28,
+    8
+   ],
+   "fw_point": [
+    196,
+    64
+   ]
+  },
+  {
+   "led": 74,
+   "row": 5,
+   "col": 0,
+   "keycode": "0x00E0",
+   "name": "Left Ctrl",
+   "alt_only": false,
+   "cx": 0.625,
+   "cy": 5.75,
+   "grid": [
+    0,
+    10
+   ],
+   "fw_point": [
+    3,
+    76
+   ]
+  },
+  {
+   "led": 75,
+   "row": 5,
+   "col": 1,
+   "keycode": "0x00E3",
+   "name": "Left Win",
+   "alt_only": false,
+   "cx": 1.875,
+   "cy": 5.75,
+   "grid": [
+    2,
+    10
+   ],
+   "fw_point": [
+    17,
+    76
+   ]
+  },
+  {
+   "led": 76,
+   "row": 5,
+   "col": 2,
+   "keycode": "0x00E2",
+   "name": "Left Alt",
+   "alt_only": false,
+   "cx": 3.125,
+   "cy": 5.75,
+   "grid": [
+    5,
+    10
+   ],
+   "fw_point": [
+    34,
+    76
+   ]
+  },
+  {
+   "led": 77,
+   "row": 5,
+   "col": 3,
+   "keycode": "0x002C",
+   "name": "Space (split L)",
+   "alt_only": true,
+   "cx": 5.5,
+   "cy": 5.75,
+   "grid": [
+    10,
+    10
+   ],
+   "fw_point": [
+    93,
+    76
+   ]
+  },
+  {
+   "led": 78,
+   "row": 5,
+   "col": 4,
+   "keycode": "0x002C",
+   "name": "Space",
+   "alt_only": false,
+   "cx": 6.875,
+   "cy": 5.75,
+   "grid": [
+    12,
+    10
+   ],
+   "fw_point": [
+    106,
+    76
+   ]
+  },
+  {
+   "led": 79,
+   "row": 5,
+   "col": 6,
+   "keycode": "0x002C",
+   "name": "Space (split M / 7U)",
+   "alt_only": true,
+   "cx": 7.5,
+   "cy": 5.75,
+   "grid": [
+    14,
+    10
+   ],
+   "fw_point": [
+    120,
+    76
+   ]
+  },
+  {
+   "led": 80,
+   "row": 5,
+   "col": 7,
+   "keycode": "0x002C",
+   "name": "Space (split R)",
+   "alt_only": true,
+   "cx": 9.5,
+   "cy": 5.75,
+   "grid": [
+    18,
+    10
+   ],
+   "fw_point": [
+    127,
+    76
+   ]
+  },
+  {
+   "led": 81,
+   "row": 5,
+   "col": 10,
+   "keycode": "0x00E6",
+   "name": "Right Alt",
+   "alt_only": false,
+   "cx": 10.625,
+   "cy": 5.75,
+   "grid": [
+    20,
+    10
+   ],
+   "fw_point": [
+    151,
+    76
+   ]
+  },
+  {
+   "led": 82,
+   "row": 5,
+   "col": 11,
+   "keycode": "0x5221",
+   "name": "Fn",
+   "alt_only": false,
+   "cx": 11.875,
+   "cy": 5.75,
+   "grid": [
+    22,
+    10
+   ],
+   "fw_point": [
+    168,
+    76
+   ]
+  },
+  {
+   "led": 83,
+   "row": 5,
+   "col": 12,
+   "keycode": "0x0050",
+   "name": "Left Arrow",
+   "alt_only": false,
+   "cx": 13.5,
+   "cy": 5.75,
+   "grid": [
+    26,
+    10
+   ],
+   "fw_point": [
+    182,
+    76
+   ]
+  },
+  {
+   "led": 84,
+   "row": 5,
+   "col": 13,
+   "keycode": "0x0051",
+   "name": "Down Arrow",
+   "alt_only": false,
+   "cx": 14.5,
+   "cy": 5.75,
+   "grid": [
+    28,
+    10
+   ],
+   "fw_point": [
+    196,
+    76
+   ]
+  },
+  {
+   "led": 85,
+   "row": 5,
+   "col": 14,
+   "keycode": "0x004F",
+   "name": "Right Arrow",
+   "alt_only": false,
+   "cx": 15.5,
+   "cy": 5.75,
+   "grid": [
+    30,
+    10
+   ],
+   "fw_point": [
+    210,
+    76
+   ]
+  }
+ ]
+}

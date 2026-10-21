@@ -1,0 +1,166 @@
+# Patch v2, step 6: 2.4G throughput and link quality (2026-10-21)
+
+Firmware: `out_v2/patched_v2.hex` (`1f1f1c46…e59d`), unchanged,
+not reflashed. Every hardware run had the user's OK first. Receiver `6D66:8888`, keyboard in 2.4G
+mode, cable unplugged (checked with `--list` before each run), VIA / SignalRGB / Console / Wuque
+tools closed (process list checked).
+
+Legend: **V** verified, with the method (asm = disassembly, dec = Ghidra decompile, data = parsed bytes, src = source code, hw = measured on the keyboard, log = SignalRGB's log, emu = emulator); **I** inferred, with the reasoning.
+
+## 1. Results in short
+
+| Question | Answer | Tag |
+|---|---|---|
+| Typing while streaming at the maximum plugin load | Normal: no lag, no lost, doubled or stuck keys; board correct | V hw + user |
+| Damage at the paced rate, both directions (quiet off, 100 ms) | **0 of 3,000** echoes differ (plus 0 of 1,085 in step 5c) | V hw |
+| Damage on the way TO the keyboard (quiet on, ≥ 80 ms) | **0 replies to 5,167 colour packets** (plus ~1,070 in step 5c) | V hw |
+| Loss at 80 ms, quiet on | **0 of 300** `0x22` probes lost | V hw |
+| Round trip | 43 ms median, 70 ms max (quiet off); 44 / 53 ms (probes, quiet on) | V hw |
+| Partial updates at the planned defaults | Still scene stays (keep-alive), indicators clear, a single key walks cleanly, full-board changes sweep in ~0.8 s | V hw + user |
+| Firmware guard needed? | **Not by the data.** Optional hardening written up in section 5; your decision | I |
+
+## 2. Hardware runs
+
+| Run | Command (all `--vid 0x6D66 --pid 0x8888 --led`) | Result | Log |
+|---|---|---|---|
+| 1 Typing | `--steps hold --quiet --packet-gap 80 --hold-seconds 120` | PASS, 1,480 colour packets, spacing 79.9–117.8 ms (mean 81.5), no reply at all. User: typing **normal**, whole board orange/purple | `logs/srgb_hidtest_20261021_011054_rx_ledquiet.log` |
+| 2a | `--steps soak --packet-gap 100 --soak-packets 3000` | Stopped by itself after 5 read-only queries: all answered `FF` + echo = keyboard not in 2.4G mode (the cable had been plugged in and out). Nothing else sent | `…_094405_rx_soak.log` |
+| 2 Soak, quiet off | same, after Fn+V | PASS: **3,000/3,000 exact echoes**, 0 damaged, 0 lost, round trip median 43.4 / 90 % 47.5 / max 70.0 ms, none held back; 326 s without touching the keyboard | `…_094539_rx_soak.log` |
+| 3 Soak, quiet on | `--steps soak --quiet --packet-gap 80 --soak-packets 3000 --soak-probe-every 1` | PASS: 3,000 colour + 300 `0x22` probes in 265 s, spacing median 80.0 / min 79.7 ms; **probes 300/300**, round trip 44.1 / 53.4 ms; **0 unexpected replies** | `…_095727_rx_soakquiet.log` |
+| 4 Partial | `--steps partial --quiet --packet-gap 80` | PASS, 452 packets, spacing ≥ 80.1 ms, 0 replies. User: green stayed 10 s; Fn / Caps Lock indicators lit and went back to blue within ~2 s; colour changes reached some areas "a moment later" (expected sweep); white key on green too faint to judge | `…_100529_rx_partialquiet.log` |
+| 4b Walk | `--steps partial --quiet --packet-gap 80 --partial-phases dot` (white key on dark keys) | PASS, 235 packets, 0 replies. User: **clean walk** | `…_101655_rx_partialquiet.log` |
+
+## 3. Damage (corruption)
+
+### What was seen before (step 5c pace runs, overload)
+
+- 4 damaged echoes among ~480 delivered under overloaded bursts (gaps 1–75 ms, with losses).
+- The changed bits come in short runs of adjacent bits: XOR `03`, `0C`, `06`, `18`, `3C`, `30`, `40`, and one `73`.
+  I: line-level or sampling damage, not bytes from another packet (the wrong values occur in no packet).
+- One (`24 6d 09…`, start 45 → 109) is provably damaged on the way back.
+
+### At the paced rate (this step)
+
+- **Both directions, all 32 bytes (quiet off, 100 ms):** 0 of 3,000 + 1,085 = **0 of 4,085**.
+  I (rule of three): at 95 % confidence the rate is below 0.07 % per packet.
+- **On the way to the keyboard (quiet on, ≥ 80 ms):** 0 replies to 5,167 colour packets in this step.
+  With quiet on the keyboard replies to a colour packet only if it arrived damaged:
+  - a damaged start/count gives `24 FD`/`24 FE` (`srgb_radio.c`, always sent);
+  - a damaged byte 0 gives a VIA or SignalRGB reply.
+
+  So 0 replies means no damage in bytes 0–2 was seen. I: below 0.06 % per packet at 95 %.
+  Damage in the colour bytes would be invisible here, but it would only show a wrong colour until the next refresh.
+- **I:** damage comes with overload (packets closer together than the link's ~75–100 ms per packet). Kept at ≥ 80 ms, none was seen.
+  Downlink damage is therefore not observed. It can't be ruled out, only bounded.
+
+### Why byte 0 matters (V dec + computed)
+
+- VIA dispatcher `0x0800F620` implements `0x01`–`0x15` except `0x0A`/`0x0B`, which fall to "unhandled", so there is no EEPROM reset and no bootloader jump.
+- Writes: `03` set value, `05` set keycode, `06` keymap reset, `07` custom set, `09` custom save, `0F` macro set, `10` macro reset, `13` set buffer, `15` set encoder.
+- Bit-flip neighbours of each SignalRGB ID that are VIA writes (computed over all patterns):
+
+| First byte | 1 bit | 2 bits | Runs of adjacent bits (as seen) |
+|---|---|---|---|
+| `0x24` stream | none | `05`, `06` (bits {0,5}, {1,5}) | none |
+| `0x21` / `0x22` / `0x28` | none | 2–3 IDs | none (`0x28`: one 3-bit run → `10`) |
+| `0x23` / `0x25` / `0x26` / `0x27` | **`03` / `05` / `06` / `07`** (bit 5) | 1–4 IDs | the same |
+
+- So the stream packet itself is the safest ID: one flipped bit can't make it a write.
+- The rarely sent IDs `0x23`, `0x25`, `0x26`, `0x27` are one bit from a write.
+- The plugin should send them as seldom as possible on the receiver (section 6).
+
+## 4. 2.4G defaults (for step 8)
+
+| Setting | Value | Evidence |
+|---|---|---|
+| Quiet | **on** (`25 01`) | 75 ms edge vs 100 ms with quiet off (5c); 0/300 lost at 80 ms (run 3) |
+| Spacing | **≥ 80 ms between any two packets**, handshake and `0x25`/`0x26` included | runs 1, 3, 4: no loss, no damage |
+| Updates | **GroupScheduler** (`tools/srgb_hidtest.py`): ≤ 1 packet per `Render()`; a group not sent for 3 s first; then changed 9-LED groups, round robin; then, if nothing changed, the group sent longest ago once 1.5 s old | runs 4, 4b + hostsim partial |
+| Keep-alive | Implied by the refresh: a still scene sends one packet every ~150 ms (6.7/s), far inside the 2 s timeout | run 4: green 10 s, blue 12 s, no fall-back (user) |
+| Throughput | 12.5 packets/s maximum. A single key change goes out within 176 ms (median 48), plus ~45 ms radio. A full-board change sweeps in ~0.8 s | runs 4/4b log, hostsim |
+
+The first scheduler version gave refreshes priority over changes. In a moving scene the refreshes then took most slots and a moving key lagged up to 0.76 s (hostsim partial, before any hardware run). Fixed before run 4.
+
+## 5. Optional firmware guard (a design change: not built, needs your decision)
+
+**Idea (v3):** in `srgb_rx_radio` (hook C), when all of these hold, answer `FF` (VIA "unhandled") instead of running the command:
+- mode == 2;
+- the radio stream is enabled and fresh (< 2 s since the last `0x24`/`0x25`);
+- the first byte is a VIA write ID (`03 05 06 07 09 0F 10 13 15`).
+
+- **What it would protect:** a damaged SignalRGB packet turning into a keymap, macro, encoder or setting write while SignalRGB streams. That includes the session's one `0x25`/`0x26`.
+- **What it costs:**
+  - about 20–30 bytes;
+  - a new build in a new folder;
+  - selfcheck and emulator re-verification;
+  - you flash again, then the whole regression;
+  - VIA writes over 2.4G are refused while a SignalRGB radio stream is live (VIA and SignalRGB shouldn't run together anyway).
+- **What it can't protect:** damage outside streaming. The stock firmware has the same exposure for VIA and the Console over 2.4G.
+- **My recommendation: not now.**
+  - At the paced rate, nothing was damaged in ~9,000 packets (I: bounded below ~0.06 %).
+  - The only damage ever seen came with overload, which the plugin avoids.
+  - The single-bit cases are limited to the rare IDs.
+  - Revisit if SignalRGB use over 2.4G ever shows a keymap change.
+
+## 6. Findings for the plugin (step 8) and README (step 9)
+
+- **Fn+V after plugging in or out:**
+  - V hw: after the cable had been plugged in and out, the keyboard answered over the radio but its mode byte was not 2.4G;
+  - v2 then hands every packet to VIA (`FF` replies), the designed safe behaviour;
+  - SignalRGB over the receiver needs Fn+V again.
+- **On the receiver, send `0x23`, `0x25`, `0x26`, `0x27` as seldom as possible:**
+  - skip `0x23` (unique ID, not needed for the gate);
+  - `25 01` once per session;
+  - `0x26` once at shutdown;
+  - no periodic `0x25`.
+- **Self-heal:**
+  - with quiet on, an echo of a `0x24` means the keyboard lost its radio state (reset);
+  - the plugin re-sends `25 01` once then.
+- Pace the handshake queries ≥ 80 ms apart, one reply at a time, and flush stale reports first.
+
+## 7. Head start on step 7 (power)
+
+- **V hw:** streaming without touching the keyboard ran without interruption for 5.4 min (run 2) and 4.4 min (run 3).
+- **V dec:** idle path `0x0800D9D0`.
+  - It enters STOP mode (`0x08002F20`: SLEEPDEEP + WFI) when `timer_elapsed(0x20000A58)` ≥ 60,000 ms (`0x0800DBF0`).
+  - Other conditions: no AT command pending (`0x0800F50C`), VBUS absent, bit 16 of `0x20000B88` clear.
+  - `0x20000A58` is stamped by the AT-command sender `0x080149A4` and after wake-up only.
+  - The suspend hooks it calls (`0x0800BA74`, `0x08010574`, `0x08010298`) are empty stubs.
+- **V dec:** Deep Sleep key = hold 3 s on battery (`0x08006C3C` → `0x0800D638` → `AT+DISCONN`, `AT+DEEPSLEEP`).
+- Still open (step 7):
+  - whether and when the keyboard actually sleeps when idle on 2.4G;
+  - what wakes it;
+  - whether a radio packet does;
+  - the battery cost.
+
+## 8. Tools (no firmware change)
+
+- `tools/srgb_hidtest.py`: new steps `soak` and `partial`; `--soak-packets`, `--soak-probe-every`, `--refresh-ms`, `--partial-phases`.
+  - The reply classifier `classify_reply` labels each reply down / up / either / quiet-off / late / unknown.
+  - `GroupScheduler` is the reference for the plugin.
+  - soak and partial refuse a gap below 75 ms and refuse USB.
+  - Backup of the previous version: `backups/srgb_hidtest_v2pace_0c5dfbf0.py`.
+- `tools/hostsim.py`: `RadioKeyboard2(damage=…)` XORs bytes on the way to the keyboard or back; loss `("random", P)` drops `0x24` only. New commands:
+  - `soak`: injected damage classified and matched to its packet, loss counted, refusals;
+  - `partial`: frame buffer = scene at each phase end, a one-LED walk over all 86 in order, ≥ 80 ms spacing, no fall-back, repair under 25 % loss.
+  - Backup: `backups/hostsim_v2pace_ade41c81.py`.
+- `tools/run_offline_suite.sh`: adds `v2_soak` and `v2_partial`. Backup: `backups/run_offline_suite_7535defe.sh`.
+- Not done (optional): the wired 1.00 ms vs 2.00 ms bench difference.
+
+## 9. Hashes and offline suite
+
+| File | SHA-256 |
+|---|---|
+| `tools/srgb_hidtest.py` (final) | `9a186c5a0ea6798f6482f6610f94c928275fa9be8c07e9dda6f59d1fb40c07c7` |
+| `tools/hostsim.py` | `b6dccc5b351baac1dec26664efbaaafce24f7c0c56cd09510d725891405c5cb1` |
+| `tools/run_offline_suite.sh` | `cbbe21d31ba497c7c5333fa13a499b2690e22b167b3df5da693dc8d620195420` |
+
+- The script changed between runs, and each change was tested offline before the next run:
+  - run 1 used the version from before this step (`0c5dfbf0…`);
+  - run 2 used the first soak version;
+  - run 3 added the 15 ms pacing fix;
+  - run 4 added the scheduler fix;
+  - run 4b added the dot lead-in and `--partial-phases`.
+- **Offline suite** (`bash tools/run_offline_suite.sh <scratch>`) on the final files: **16/16 PASS**, frozen files unchanged:
+  - v1: selfcheck, emutest 3,909/0, hidtest, hidtest --led, stock --led, radio, plugintest, plugin replay;
+  - v2: selfcheck --negative, emutest 47,052/0, radio2, hidtest2 (--led and read-only), pace, soak, partial.
