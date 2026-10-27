@@ -15,10 +15,13 @@ A small, verified patch for the official firmware v1.1, and two SignalRGB plugin
 
 </div>
 
+> [!NOTE]
+> Community project by Iwky. **Meletrix has agreed to distribute the SignalRGB plugins
+> officially**, so SignalRGB shows Meletrix as their publisher.
+
 > [!WARNING]
-> Unofficial community project, not affiliated with Meletrix or Wuque Studio. Flashing
-> modified firmware is at your own risk: read [Flashing and safety](docs/flashing.md) first.
-> This repository does not contain Meletrix's firmware, only the patch.
+> Flashing modified firmware is at your own risk: read [Flashing and safety](docs/flashing.md)
+> first. This repository does not contain Meletrix's firmware, only the patch.
 
 ## Features
 
@@ -135,6 +138,7 @@ If this project helped you, you can buy me a coffee:
   plugins started from SRGBmods' plugin template
   ([SRGBmods/qmk-plugins](https://github.com/SRGBmods/qmk-plugins), GPL-2.0), and the firmware
   patch implements SRGBmods' QMK protocol 1.0.6.
+- The plugins name **Meletrix** as their publisher, with Meletrix's agreement.
 - **Not included and not covered by this license:** Meletrix's firmware and tools. The patch
   is applied to the official firmware you download yourself.
 - Meletrix, Zoom75 TIGA, Wuque Studio, SignalRGB and VIA are trademarks of their owners.

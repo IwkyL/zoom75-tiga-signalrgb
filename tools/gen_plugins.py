@@ -18,12 +18,12 @@ ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "plugin" / "src" / "tiga_plugin.src.js"
 VARIANTS = {
     "Meletrix_Zoom75_TIGA_SignalRGB.js": {
-        "NAME": "Meletrix Zoom75 TIGA (SignalRGB patch)",
+        "NAME": "Meletrix Zoom75 TIGA",
         "VID": "0x1EA7", "PID": "0xCEDD", "RADIO": "false", "LABEL": "Zoom75 TIGA",
         "VARIANT": "1EA7:CEDD, the USB cable (sends exactly what v1.0.1 sent)",
     },
     "Meletrix_Zoom75_TIGA_24G_SignalRGB.js": {
-        "NAME": "Meletrix Zoom75 TIGA 2.4G (SignalRGB patch)",
+        "NAME": "Meletrix Zoom75 TIGA 2.4G",
         "VID": "0x6D66", "PID": "0x8888", "RADIO": "true", "LABEL": "Zoom75 TIGA 2.4G",
         "VARIANT": "6D66:8888, the 2.4G receiver (needs patch v2 on the keyboard)",
     },

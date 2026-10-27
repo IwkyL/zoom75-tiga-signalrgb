@@ -1,8 +1,13 @@
+// SignalRGB plugin for the Meletrix Zoom75 TIGA (patched official firmware v1.1).
+// Developed by Iwky: https://github.com/IwkyL/zoom75-tiga-signalrgb
+// Based on SRGBmods' QMK plugin template (https://github.com/SRGBmods/qmk-plugins).
+// License: GPL-2.0, see the LICENSE file in the repository above.
+
 export function Name() { return "@NAME@"; }
-export function Version() { return "1.1.0"; }
+export function Version() { return "1.2.0"; }
 export function VendorId() { return @VID@; }
 export function ProductId() { return @PID@; }
-export function Publisher() { return "Local build (TIGA SignalRGB patch)"; }
+export function Publisher() { return "Meletrix"; }
 export function DeviceType() { return "keyboard"; }
 export function Size() { return [31, 11]; }
 export function DefaultPosition() { return [10, 100]; }

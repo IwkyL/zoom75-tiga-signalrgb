@@ -32,8 +32,9 @@ matches a plugin by `VendorId()` / `ProductId()`, and documents an array only fo
    Copy-Item plugin\Meletrix_Zoom75_TIGA_SignalRGB.js, plugin\Meletrix_Zoom75_TIGA_24G_SignalRGB.js -Destination (Join-Path ([Environment]::GetFolderPath('MyDocuments')) 'WhirlwindFX\Plugins')
    ```
 
-3. Start SignalRGB. The keyboard shows up as **Meletrix Zoom75 TIGA (SignalRGB patch)** on the
-   cable, or **Meletrix Zoom75 TIGA 2.4G (SignalRGB patch)** through the receiver.
+3. Start SignalRGB. The keyboard shows up as **Meletrix Zoom75 TIGA** on the cable, or
+   **Meletrix Zoom75 TIGA 2.4G** through the receiver, with Meletrix as the publisher. (Before
+   version 1.2.0 the names ended in "(SignalRGB patch)".)
 
 Plugins in that folder survive SignalRGB updates. Close VIA and the Meletrix Console while
 SignalRGB runs: they share the keyboard's raw HID interface (SignalRGB's docs say the same
@@ -112,8 +113,9 @@ VID/PID, `const Radio`). They speak the SRGBmods QMK protocol 1.0.6 on the raw H
 - Render: 86 LEDs as 10 `0x24` packets (9 LEDs each, the last one 5).
 - Shutdown: `0x26`. If SignalRGB keeps rendering afterwards (e.g. after the PC resumes), the
   plugin sends `0x25` again by itself.
-- Version 1.1.0 sends exactly what version 1.0.1 sent; the test suite compares every write,
-  read and notification with a copy of 1.0.1.
+- Version 1.1.0 and later send exactly what version 1.0.1 sent (1.2.0 changed only the name,
+  publisher and credit header); the test suite compares every write, read and notification
+  with a copy of 1.0.1.
 
 **2.4G plugin, what it does differently:**
 
