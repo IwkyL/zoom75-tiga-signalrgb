@@ -66,3 +66,17 @@ for at most 2 s before the timeout hands the LEDs back; the 2 s timeout exists f
 | Idle on battery, 2.4G, nothing sent | Asleep (LEDs and LCD off) within about 13 min; 31 probes over 2.5 min unanswered; a key press wakes it, radio back 16–21 s later | `--steps idle` + seen |
 | 16 min stream at the plugin's pacing, untouched | Stays awake: colours alternating to the end, 12/12 probes answered | `--steps idle` + seen |
 | Two plugin bugs found here, fixed the same day | Queries 80 ms apart: the second arrived damaged (now 150 ms); SignalRGB's `device.read` result is not a plain Array (now copied by index) | Log |
+
+## Plugins 1.2.0 (new names and publisher), 2026-10-27
+
+1.2.0 changed only the device names, the publisher and a comment header at the top of each
+file. The data sent to the keyboard is the same as in 1.1.0 (the offline suite compares every
+packet), so the results above still apply. This check confirms SignalRGB loads the renamed
+files.
+
+| Check | Result | How |
+|---|---|---|
+| SignalRGB loads both renamed plugin files | Yes | Log |
+| Cable: listed as "Meletrix Zoom75 TIGA", plugin 1.2.0, handshake (protocol 1.0.6, 86 LEDs, type VIA), `0x25` | Yes | Log |
+| 2.4G: listed as "Meletrix Zoom75 TIGA 2.4G"; with the cable plugged in it waits and the cable plugin streams | As expected | Log |
+| SignalRGB effects on the keyboard | Work | Seen |
